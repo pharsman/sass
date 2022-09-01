@@ -1,0 +1,30 @@
+$myColor: #ff00f2;
+$fontSize: 90px;
+$color: purple;
+$sizesList: (1, 2, 3, 4, 5);
+
+%myButton {
+    width: 100px;
+    padding: 20px;
+    background-color: $myColor;
+    outline: none;
+    border: none;
+    color: $color;
+    cursor: pointer;
+    margin-left: 500px;
+}
+
+@function setBackground($myColor) {
+    @return $myColor;
+}
+
+@mixin myCircle($radius) {
+    width: 100px;
+    height: 100px;
+    border-radius: $radius;
+    @if ($radius>60%) {
+        background-color: black;
+    } @else {
+        background-color: orange;
+    }
+}
